@@ -12,12 +12,13 @@ use app\models\ContactForm;
 
 class LkController extends Controller
 {
-
+//ограничение доступа
     public function beforeAction($action){
-        
+        // отсекаем гостей
         if(Yii::$app->user->isGuest ){
             return $this->redirect(['site/login']);
          }
+         //  отсекаем админов
         if( Yii::$app->user->identity->admin == 1){
              return $this->redirect(['site/login']);
           }

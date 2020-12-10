@@ -43,7 +43,7 @@ $config = [
             ],
         ],
         'db' => $db,
-        
+        // ЧПУ
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

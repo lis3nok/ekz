@@ -26,7 +26,7 @@ class SiteController extends Controller
 
     public function actionSaveUser()
     {
-
+        // при прохождении все хпроверок сохр пользю и логинемся под ним
         $model = new User();
 
         if ($model->load(Yii::$app->request->post())) {
@@ -96,6 +96,7 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        // берем из бд данные по таблице запросы и отправляем на индекс
         $request = Request::find()->where(['status' => 'Solved'])->all();
         $count=count($request);
 

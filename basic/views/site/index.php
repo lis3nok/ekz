@@ -5,7 +5,7 @@ use yii\helpers\Html;
 $this->title = 'My Yii Application';
 ?>
 <div class="site-index">
-
+<!-- вывод кол-во решенных заявок -->
     <div class="jumbotron">
         <h1>Решенных заявок: </h1>
 
@@ -17,6 +17,7 @@ $this->title = 'My Yii Application';
 
         <div class="row">
         <?php
+        // вывод решенных заявок с изобр.
         foreach($request as $model){
             echo'
                 <div class="col-lg-3">

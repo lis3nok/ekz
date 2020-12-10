@@ -28,8 +28,9 @@ AppAsset::register($this);
 
 <div class="wrap">
 <?php
+// параметры меню
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
+        'brandLabel' => 'ГП - "Городская Помощь"',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',

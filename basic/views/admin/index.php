@@ -9,7 +9,7 @@ $this->title = 'My Yii Application';
 
     <div class="jumbotron">
         <h1>Привет админ!</h1>
-
+    <!-- ссылки на Управление категориями и заявками -->
         <?= Html::a('Управление категориями', ['/categories'], ['class' => 'profile-link']) ?>
         <br>
         <?= Html::a('Управление заявками', ['/request'], ['class' => 'profile-link']) ?>

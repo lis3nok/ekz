@@ -10,6 +10,8 @@ use yii\widgets\ActiveForm;
 
 <div class="request-form">
 
+    <!-- форма заявок -->
+
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'status')->dropDownList($items) ?>
