@@ -23,9 +23,9 @@ $this->title = 'My Yii Application';
                 <div class="col-lg-3">
                 <h2>'.$model->name.'</h2>
                 <p>'.$model->description.'</p>
-                <p>'.$model->timestamp.'</p>';
-                echo Html::img('@web/uploads/'.$model->photoBefore.'', ['alt' =>'logo']) ;
-                echo '
+                <p>'.$model->timestamp.'</p>
+                <p class="imagePost">'.Html::img('@web/uploads/'.$model->photoBefore.'', ['alt' =>'logo']).'</p>
+                
                 </div>
             ';
         }

@@ -119,3 +119,7 @@ a.desc:after {
 .navbar{
     background-color: #212121;
 }
+.imagePost img{
+    max-width: 50%;
+    max-height: 50%;
+}
