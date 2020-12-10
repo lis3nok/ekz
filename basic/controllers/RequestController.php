@@ -117,14 +117,10 @@ class RequestController extends Controller
      * @throws NotFoundHttpException if the model cannot be found
      */
 
-    $items=[];
-
     protected function findModel($id)
     {
         if (($model = Request::findOne($id)) !== null) {
-            return $model,[
-                'items' => $items,
-            ];
+            return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
