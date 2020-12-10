@@ -10,9 +10,40 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Request;
+use app\models\User;
 
 class SiteController extends Controller
 {
+
+
+    public function actionReg(Type $var = null)
+    {
+        $model = new User();
+        return $this->render('reg', [
+            'model'=> $model,
+        ]);
+    }
+
+    public function actionSaveUser()
+    {
+
+        $model = new User();
+
+        if ($model->load(Yii::$app->request->post())) {
+            if($model->password == $_POST['confirmPass'] && !empty($_POST['agree'])){
+                if($model->save()){
+                    Yii::$app->user->login($model);
+                    return $this->redirect(['/lk']);
+                }
+            }else{
+                echo "пароли не совпадают или не отмечено согласие";
+            }
+            
+        }
+
+        // var_dump($_REQUEST);
+    }
+
     /**
      * {@inheritdoc}
      */
