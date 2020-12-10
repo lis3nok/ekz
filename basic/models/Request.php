@@ -15,6 +15,7 @@ use Yii;
  * @property string $photoBefore
  * @property string|null $photoAfter
  * @property string $timestamp
+ * @property string $staus
  *
  * @property User $user
  * @property Categories $categories
@@ -38,6 +39,7 @@ class Request extends \yii\db\ActiveRecord
             [['id_user', 'id_categories', 'name', 'description', 'photoBefore'], 'required'],
             [['id_user', 'id_categories'], 'integer'],
             [['timestamp'], 'safe'],
+            [['staus'], 'string'],
             [['name', 'photoBefore', 'photoAfter'], 'string', 'max' => 100],
             [['description'], 'string', 'max' => 255],
             [['id_user'], 'exist', 'skipOnError' => true, 'targetClass' => User::className(), 'targetAttribute' => ['id_user' => 'id']],
@@ -59,6 +61,7 @@ class Request extends \yii\db\ActiveRecord
             'photoBefore' => 'Photo Before',
             'photoAfter' => 'Photo After',
             'timestamp' => 'Timestamp',
+            'staus' => 'Staus',
         ];
     }
 
